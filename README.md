@@ -2,20 +2,20 @@
 
 ![ChoomCity transmission banner with a neon Night City skyline](assets/choomcity-banner.svg)
 
-**Your V. Your crew. One Night City.** Choom-op brings experimental PC co-op to Cyberpunk 2077. Meet up in the host’s world, take a passenger seat, and explore together using your own V and save.
+Choom-op is my co-op mod for Cyberpunk 2077 on PC. Bring your own V, hop in a car with a friend, and go explore Night City together.
 
 **[Get v0.5.1 for Windows](https://github.com/Mackaboi/ChoomCity-Releases/releases/tag/v0.5.1)** · [All builds](https://github.com/Mackaboi/ChoomCity-Releases/releases) · [Report a bug](https://github.com/Mackaboi/ChoomCity-Releases/issues)
 
 > [!WARNING]
-> **Very experimental · Early development.** The v0.5.1 release passed automated checks, including a two-player simulation. The project is still awaiting its first live test inside Cyberpunk 2077. Expect bugs and broken sessions.
+> **This is still very early and experimental.** I’m still working on it, so expect some bugs.
 
 ## Inside ChoomCity
 
-- **Meet in the CHOOMCITY hub.** Host or join from the main or pause menu using Steam invites, a join code, or an IP address. Set a lobby password and ready up before you head out.
-- **Show up as your own V.** Friends see your outfit and weapon, along with actions like sprinting, crouching, aiming, and reloading. Face sync is experimental.
-- **Ride shotgun.** Share a car, keep your seat, and try shooting from the passenger side. Vehicle sync is designed to keep one copy of each car.
-- **Explore the host’s streets.** Nearby guests see mirrored traffic, pedestrians, and enemies. Fight the same enemies while time and weather follow the host.
-- **Keep your own progress.** Each player loads their own save. Co-op saves are organized by host, with synchronized autosaves and dialogue voting for groups playing at the same story point.
+- **Host or join from CHOOMCITY.** It’s in the main menu and pause menu. Join with a Steam invite, a code, or an IP address.
+- **Play as your own V.** Your friends can see what you’re wearing, what gun you’re holding, and what you’re doing. Face sync is still experimental.
+- **Ride shotgun.** Get in the same car as your friend and shoot from the passenger seat.
+- **Explore together.** Stick close to the host to see their traffic, pedestrians, and enemies. Time and weather follow the host too.
+- **Keep your own save.** Everyone loads their own V. Co-op saves are kept separately for each host, and if you’re at the same point in the story, you can vote on dialogue choices.
 
 ## Get into Night City
 
@@ -25,19 +25,18 @@
 
 **Manual install** · Install RED4ext, Cyber Engine Tweaks, and redscript, then extract `CoopMod-*.zip` into your Cyberpunk 2077 folder. Native Settings UI is optional.
 
-## Known limits and first tests
+## Good to know
 
-- **Connections are direct.** Steam invites still need a reachable host. If automatic port mapping fails, the host can forward UDP port 7777 or use Tailscale.
-- **The shared world is local to the host.** NPC mirroring covers the area near the host (150 m by default). Mirrored NPCs can behave differently on each screen.
-- **Story progress depends on where you start.** Play from the same story point. The optional journal test copies quest objectives, while each game still runs its own quest scripts.
-- **Back up saves before testing.** Manually overwriting a solo save during co-op can still replace it.
+- **Can’t connect?** Even with a Steam invite, you’re connecting directly to the host. If automatic port mapping fails, the host can forward UDP port 7777 or use Tailscale.
+- **Stay near the host.** NPCs sync within 150 m by default and can still act differently on each player’s screen.
+- **Doing story missions?** Start from the same point. The optional journal setting copies quest objectives, but each game still runs its own quests.
+- **Back up your saves.** If you manually save over a solo save while playing co-op, it’ll still overwrite that save.
+- **Save or face acting up?** If **Continue my game** gets stuck, try Cyberpunk’s regular **Continue** button. If a friend’s face looks off, turn off **Show friends’ faces**.
 
-The first live tests should cover opening **CHOOMCITY**, joining from the main menu, loading the right save, face and outfit sync, passenger combat, shared NPC damage, and dialogue votes. If **Continue my game** stalls, try the game’s own **Continue**. If faces look wrong, disable **Show friends’ faces**.
-
-## Field diagnostics
+## If something goes wrong
 
 ![Telemetry panel showing the F10 overlay shortcut, connection stats, frame timing, and session logs](assets/choomcity-telemetry.svg)
 
-**Press F10** during a session to see ping, packet loss, bandwidth, position update freshness, and how much frame time the mod uses. v0.5.1 also adds retries for one-time messages such as votes, saves, and car handovers.
+**Press F10** during a session to see ping, packet loss, and how much time the mod is taking each frame.
 
-When something breaks, open **CHOOMCITY → Help → Copy problem report** and paste it into a [GitHub issue](https://github.com/Mackaboi/ChoomCity-Releases/issues). Include what the host and guest were doing. For lag or desync, attach `coop_stats.log` if available.
+If you hit a bug, go to **CHOOMCITY → Help → Copy problem report** and paste it into a [GitHub issue](https://github.com/Mackaboi/ChoomCity-Releases/issues). A quick note about what you and your friend were doing helps. If it’s lag or desync, attach `coop_stats.log` if you have it.
