@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 280" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 340" role="img" aria-labelledby="title description">
   <title id="title">ChoomCity</title>
   <desc id="description">A Night City transmission with acid-yellow lettering, cyan circuitry, and a hot pink skyline.</desc>
   <defs>
@@ -16,11 +16,15 @@
     </pattern>
   </defs>
 
-  <path fill="url(#night)" d="M0 0h1120v280H0z"/>
-  <path fill="url(#scanlines)" d="M0 0h1120v280H0z"/>
-  <path fill="none" stroke="#747184" stroke-width="2" d="M19 55V19h1028l54 54v151m0 10v27H73l-54-54V67"/>
-  <path fill="none" stroke="#5ff6ed" stroke-width="3" d="M19 55V19h88m909 242h85v-27"/>
-  <path fill="#f8fa58" d="M107 18h37l-8 8h-37zM987 255h40l-8 8h-40z"/>
+  <path fill="url(#night)" d="M0 0h1120v340H0z"/>
+  <path fill="url(#scanlines)" d="M0 0h1120v340H0z"/>
+  <path fill="none" stroke="#747184" stroke-width="2" d="M19 55V19h1028l54 54v211m0 10v27H73l-54-54V67"/>
+  <path fill="none" stroke="#5ff6ed" stroke-width="3" d="M19 55V19h88m909 302h85v-27"/>
+  <path fill="#f8fa58" d="M107 18h37l-8 8h-37zM987 315h40l-8 8h-40z"/>
+
+  <path fill="none" stroke="#e3529b" opacity=".28" d="M663 249l-58 20m108-20-34 20m83-20-15 20m64-20-3 20m52-20 12 20m37-20 23 20m26-20 40 20m9-20 59 20m-444-8h421"/>
+  <path fill="none" stroke="#5ff6ed" stroke-opacity=".38" d="M631 153V93l16-16h35m-71 82h35l15-15h43m307-61h36l20 20v27"/>
+  <path fill="#22182d" d="M639 223v-45h12v-13h19v13h19v32h18v-29h21v44zm286-8v-66h17v-11h16v-18h18v18h19v53h12v30z"/>
 
   <circle cx="879" cy="124" r="76" fill="url(#sun)"/>
   <path stroke="#3c173e" stroke-width="3" opacity=".55" d="M815 163h128m-123 9h118m-109 9h100m-87 9h74"/>
@@ -38,4 +42,11 @@
   <text x="64" y="172" fill="#f8fa58" font-family="Arial, sans-serif" font-weight="900" font-size="86" font-style="italic" letter-spacing="-4">CHOOMCITY</text>
   <path fill="#f8fa58" d="M67 191h467l-11 4H67z"/>
   <text x="67" y="226" fill="#dedce9" font-family="Consolas, monospace" font-size="18" letter-spacing="2">CYBERPUNK 2077 MULTIPLAYER</text>
+  <path fill="#101421" stroke="#545063" d="M52 269h1017v21l-13 13H75l-23-23z"/>
+  <g font-family="Consolas, monospace" font-size="16" letter-spacing="2">
+    <text x="76" y="292" fill="#5ff6ed">01 / HOST A SESSION</text>
+    <text x="413" y="292" fill="#5ff6ed">02 / BRING YOUR V</text>
+    <text x="764" y="292" fill="#f8fa58">EARLY DEVELOPMENT</text>
+  </g>
+  <path fill="none" stroke="#545063" d="M379 276l-11 20m359-20-11 20"/>
 </svg>
