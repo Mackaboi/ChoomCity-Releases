@@ -3,23 +3,23 @@
   <desc id="description">F10 opens the stats overlay for network health, frame timing, and session logs. The traces are decorative.</desc>
   <style>
     @media (prefers-reduced-motion: no-preference) {
-      .signal-sweep { animation: signal-sweep 1.5s linear .2s; }
+      .signal-sweep { animation: signal-sweep 6s linear .2s infinite; }
       .timing-bars {
         transform-box: fill-box;
         transform-origin: center bottom;
-        animation: timing-ready .5s cubic-bezier(.23, 1, .32, 1) .5s backwards;
+        animation: timing-pulse 6s cubic-bezier(.77, 0, .175, 1) .2s infinite;
       }
     }
 
     @keyframes signal-sweep {
       0% { transform: translateX(0); opacity: 0; }
-      15%, 85% { opacity: .8; }
-      100% { transform: translateX(220px); opacity: 0; }
+      4%, 21% { opacity: .8; }
+      25%, 100% { transform: translateX(220px); opacity: 0; }
     }
 
-    @keyframes timing-ready {
-      from { transform: scaleY(.65); opacity: .45; }
-      to { transform: scaleY(1); opacity: 1; }
+    @keyframes timing-pulse {
+      0%, 20%, 100% { transform: none; opacity: 1; }
+      8% { transform: scaleY(.65); opacity: .45; }
     }
   </style>
   <defs>

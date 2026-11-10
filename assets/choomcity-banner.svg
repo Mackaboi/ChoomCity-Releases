@@ -3,14 +3,14 @@
   <desc id="description">A Night City transmission with acid-yellow lettering, cyan circuitry, and a hot pink skyline.</desc>
   <style>
     @media (prefers-reduced-motion: no-preference) {
-      .skyline-scan { animation: skyline-scan 2.4s linear .25s; }
+      .skyline-scan { animation: skyline-scan 8s linear .25s infinite; }
     }
 
     @keyframes skyline-scan {
       0% { transform: translateY(0); opacity: 0; }
-      15% { opacity: .78; }
-      80% { opacity: .65; }
-      100% { transform: translateY(192px); opacity: 0; }
+      4.5% { opacity: .78; }
+      24% { opacity: .65; }
+      30%, 100% { transform: translateY(192px); opacity: 0; }
     }
   </style>
   <defs>
