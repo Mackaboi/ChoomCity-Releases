@@ -1,6 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 340" role="img" aria-labelledby="title description">
   <title id="title">ChoomCity</title>
   <desc id="description">A Night City transmission with acid-yellow lettering, cyan circuitry, and a hot pink skyline.</desc>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .skyline-scan { animation: skyline-scan 2.4s linear .25s; }
+    }
+
+    @keyframes skyline-scan {
+      0% { transform: translateY(0); opacity: 0; }
+      15% { opacity: .78; }
+      80% { opacity: .65; }
+      100% { transform: translateY(192px); opacity: 0; }
+    }
+  </style>
   <defs>
     <linearGradient id="night" x2="1" y2="1">
       <stop stop-color="#101421"/>
@@ -14,6 +26,16 @@
     <pattern id="scanlines" width="8" height="8" patternUnits="userSpaceOnUse">
       <path d="M0 7.5h8" stroke="#fff" stroke-opacity=".05"/>
     </pattern>
+    <linearGradient id="scan-beam" gradientUnits="userSpaceOnUse" x1="640" y1="56" x2="1081" y2="56">
+      <stop stop-color="#5ff6ed" stop-opacity="0"/>
+      <stop offset=".28" stop-color="#5ff6ed" stop-opacity=".7"/>
+      <stop offset=".72" stop-color="#d9fffc"/>
+      <stop offset="1" stop-color="#5ff6ed" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scan-trail" x2="0" y2="1">
+      <stop stop-color="#5ff6ed" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5ff6ed" stop-opacity=".18"/>
+    </linearGradient>
   </defs>
 
   <path fill="url(#night)" d="M0 0h1120v340H0z"/>
@@ -36,6 +58,10 @@
   <path fill="none" stroke="#5ff6ed" stroke-width="3" d="M774 136h32m-32 10h23m-23 10h32m-31 10h15m68 14h21m-21 10h15m80-44h31m-31 10h21m-21 10h31m-31 10h21"/>
   <path fill="none" stroke="#f176ad" stroke-width="2" d="M722 184h17m-17 8h17m207 0h13m63 0h21m-21 8h21m-274 29h147m17 0h66m-295-2h42"/>
   <path fill="none" stroke="#5ff6ed" stroke-width="2" d="M597 238h451l19-19h21"/>
+  <g class="skyline-scan" opacity="0">
+    <path fill="url(#scan-trail)" d="M666 36h390l25 20H640z"/>
+    <path stroke="url(#scan-beam)" stroke-width="2" d="M640 56h441"/>
+  </g>
 
   <text x="66" y="73" fill="#5ff6ed" font-family="Consolas, monospace" font-size="20" letter-spacing="4">NIGHT CITY // CO-OP</text>
   <path fill="#5ff6ed" d="M67 88h29v3H67zm37 0h6v3h-6zm12 0h6v3h-6z"/>

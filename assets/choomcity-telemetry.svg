@@ -1,10 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 144" role="img" aria-labelledby="title description">
   <title id="title">ChoomCity field diagnostics</title>
   <desc id="description">F10 opens the stats overlay for network health, frame timing, and session logs. The traces are decorative.</desc>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .signal-sweep { animation: signal-sweep 1.5s linear .2s; }
+      .timing-bars {
+        transform-box: fill-box;
+        transform-origin: center bottom;
+        animation: timing-ready .5s cubic-bezier(.23, 1, .32, 1) .5s backwards;
+      }
+    }
+
+    @keyframes signal-sweep {
+      0% { transform: translateX(0); opacity: 0; }
+      15%, 85% { opacity: .8; }
+      100% { transform: translateX(220px); opacity: 0; }
+    }
+
+    @keyframes timing-ready {
+      from { transform: scaleY(.65); opacity: .45; }
+      to { transform: scaleY(1); opacity: 1; }
+    }
+  </style>
   <defs>
     <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
       <path d="M16 0H0v16" fill="none" stroke="#5ff6ed" stroke-opacity=".1"/>
     </pattern>
+    <linearGradient id="signal-light">
+      <stop stop-color="#5ff6ed" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5ff6ed" stop-opacity=".3"/>
+    </linearGradient>
+    <clipPath id="signal-window">
+      <rect x="262" y="72" width="218" height="38"/>
+    </clipPath>
   </defs>
   <path fill="#101421" stroke="#5ff6ed" stroke-width="2" d="M2 2h1084l32 32v108H32L2 112z"/>
   <path fill="url(#grid)" d="M12 12h1070l26 26v94H36l-24-24z"/>
@@ -19,8 +47,14 @@
       <text x="822" y="63">SESSION LOGS</text>
     </g>
   </g>
+  <g clip-path="url(#signal-window)">
+    <g class="signal-sweep" opacity="0">
+      <path fill="url(#signal-light)" d="M232 72h30v38h-30z"/>
+      <path stroke="#5ff6ed" d="M262 72v38"/>
+    </g>
+  </g>
   <path fill="none" stroke="#5ff6ed" stroke-width="2" d="M262 94h27l12-13 17 26 22-34 17 21h24l12-8 15 8h72"/>
-  <path fill="#e3529b" d="M542 92h15v16h-15zm21-9h15v25h-15zm21 5h15v20h-15zm21-14h15v34h-15zm21 17h15v17h-15zm21-10h15v27h-15z"/>
+  <path class="timing-bars" fill="#e3529b" d="M542 92h15v16h-15zm21-9h15v25h-15zm21 5h15v20h-15zm21-14h15v34h-15zm21 17h15v17h-15zm21-10h15v27h-15z"/>
   <path fill="none" stroke="#5ff6ed" stroke-width="2" d="M822 83h117m-117 12h81m-81 12h101m27 0h22"/>
   <path fill="none" stroke="#545063" d="M508 30v83m280-83v83"/>
 </svg>
