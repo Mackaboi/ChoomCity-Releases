@@ -4,7 +4,7 @@
 
 Choom-op is my co-op mod for Cyberpunk 2077 on PC. Bring your own V, hop in a car with a friend, and go explore Night City together.
 
-**[Get v0.5.1 for Windows](https://github.com/Mackaboi/ChoomCity-Releases/releases/tag/v0.5.1)** · [All builds](https://github.com/Mackaboi/ChoomCity-Releases/releases) · [Report a bug](https://github.com/Mackaboi/ChoomCity-Releases/issues)
+**[Get v0.7.7 for Windows](https://github.com/Mackaboi/ChoomCity-Releases/releases/tag/v0.7.7)** · [All builds](https://github.com/Mackaboi/ChoomCity-Releases/releases) · [Report a bug](https://github.com/Mackaboi/ChoomCity-Releases/issues)
 
 > [!WARNING]
 > **This is still very early and experimental.** I’m still working on it, so expect some bugs.
